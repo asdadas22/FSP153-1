@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mi web site</title>
+    <link href="{% static 'css/style.css'%}" rel="stylesheet">
+</head>
+
+<body>
+    <main class="grid-container">    
+        <header class="header">
+            {% block header %}
+                header
+            {% endblock %}
+        </header>
+
+        <aside class="sidebar">
+            {% block sidebar %}
+                sidebar
+            {% endblock %}
+        </aside>
+        
+        <article class="article">
+            {% block articulo %}
+                articulo
+            {% endblock %}
+        </article>
+        
+        <footer class="footer">
+            {% block footer %}
+                footer
+            {% endblock %}
+        </footer>
+
+    </main>
+</body>
+</html>
