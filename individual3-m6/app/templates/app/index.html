@@ -5,8 +5,109 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navidad</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>Regalos</h1>
+    <h1>PADRES</h1>
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for padre in padres %}
+            <tr>
+                <th scope="row">{{padre.id}}</th>
+                <td>{{padre.nombre}}</td>
+                <td>{{padre.edad}}</td>
+              </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+
+      <hr>
+      <h1>HIJOS</h1>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for hijo in hijos %}
+            <tr>
+                <th scope="row">{{hijo.id}}</th>
+                <td>{{hijo.nombre}}</td>
+                <td>{{hijo.edad}}</td>
+              </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+
+      <hr>
+      <h1>SANTAS</h1>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>#</th>
+            <th>Nombre</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for santa in santas %}
+            <tr>
+                <th scope="row">{{santa.id}}</th>
+                <td>{{santa.nombre}}</td>
+              </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+
+      <hr>
+      <h1>PROVEEDORES</h1>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>#</th>
+            <th>Nombre</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for prov in proveedores %}
+            <tr>
+                <th scope="row">{{prov.id}}</th>
+                <td>{{prov.nombre}}</td>
+              </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+
+      <hr>
+      <h1>CARTAS</h1>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>#</th>
+            <th>resumen</th>
+            <th>hijo</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for carta in cartas %}
+            <tr>
+                <th scope="row">{{carta.id}}</th>
+                <td>{{carta.resumen}}</td>
+                <td>{{carta.hijos.nombre}}</td>
+              </tr>
+            {% endfor %}
+        </tbody>
+      </table>
 </body>
 </html>
