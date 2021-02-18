@@ -154,8 +154,10 @@
               <h4 class="card-title">Ultimos Datos</h4>
               <p class="card-text">Descripción de la competencia del 
                 grupo Full Stack Python de Awakelab.</p>
+
                 {% for elemento in valor %}
-                    {{ elemento }} 
+                    
+                    <li>{{ elemento.0 }} : {{ elemento.1 }}</li>
                 {% endfor %}
               <a href="#!" class="btn btn-dark">Ver mas</a>
             </div>
